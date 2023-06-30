@@ -1,0 +1,33 @@
+create database LabProject;
+use LabProject;
+
+create table Colaboradores(
+	id int primary key auto_increment,
+    	nome varchar(45),
+    	cargo varchar(45),
+	cpf varchar(45),
+	status tinyint not null default 1
+);
+
+create table Projetos(
+	id int primary key auto_increment,
+    	nome varchar(45),
+    	descricao longtext,
+    	responsavel int,
+	status tinyint not null,
+	dataInicio date,
+	dataTermino date
+);
+
+create table Tarefas(
+	id int primary key auto_increment,
+    	nome varchar(45),
+    	descricao longtext,
+    	prazo int,
+    	projeto int,
+    	responsavel int
+);
+
+insert into colaboradores (nome, cpf, cargo) values ("Rafael", "123", "Desenvolvedor"), ("Murilo", "234", "Desenvolvedor"), ("William", "456", "Gerente"), ("Fabiola", "197", "Desenvolvedor"), ("Thiago", "958", "Gerente"), ("Marcelo",  "1589", "Gerente");
+insert into projetos (nome, descricao, responsavel) values ("Projeto 1", "xxxxxxx", 3),("Projeto 2", "yyyy", 3);
+insert into tarefas (nome, descricao, prazo, projeto, responsavel) values ("Tarefa 1","tttt",15,1,1), ("Tarefa 2","rrrrr",10,1,2),("Tarefa 1","rsrsrs",5,2,2), ("Tarefa 2","rrrrr",45,2,1);

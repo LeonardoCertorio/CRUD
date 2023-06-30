@@ -1,1 +1,1 @@
-# CRUD
+CRUD em php para utilizar com Colaboradores, Projetos e Tarefas. Podendo realizar diversas consultas.
